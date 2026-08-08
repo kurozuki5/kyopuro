@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+// #include <atcoder/all>
+// using namespace atcoder;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll=long long;
+const ll INF=(1LL<<62)-(1LL<<31)-1;
+const ll mod=998244353;
+int main(){
+    int n,m;
+    cin>>n>>m;
+    vector<vector<int>>g(n);
+    rep(i,m){
+        int u,v;
+        cin>>u>>v;
+        u--;v--;
+        g[u].push_back(v);
+    }
+    vector<ll>dp(n,-1);
+    dp[n-1]=1;
+    //n-1に向かうパスの総数
+    auto f=[&](auto f,int v)->int{
+        if(v==n-1)return 1;
+        if(dp[v]!=-1)return dp[v];
+        ll ans=0;
+        for(auto nv:g[v]){
+            ans+=f(f,nv);
+            ans%=mod;
+        }
+        return dp[v]=ans%mod;
+    };
+    cout<<f(f,0)<<endl;
+}
