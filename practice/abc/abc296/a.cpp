@@ -9,6 +9,16 @@ using ll=long long;
 //やること
 //注意点
 //感想
+//やるだけ
 int main(){
-    
+    int n;
+    string s;
+    cin>>n>>s;
+    rep(i,n){
+        if(s[i]=='F'&&s[i+1]=='F'||s[i]=='M'&&s[i+1]=='M'){
+            cout<<"No"<<endl;
+            return 0;
+        }
+    }
+    cout<<"Yes"<<endl;
 }

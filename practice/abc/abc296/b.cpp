@@ -9,6 +9,15 @@ using ll=long long;
 //やること
 //注意点
 //感想
+//やるだけ
 int main(){
-    
+    vector<string>s(8);
+    rep(i,s.size())cin>>s[i];
+    rep(i,s.size()){
+        rep(j,s[i].size()){
+            if(s[i][j]=='*'){
+                cout<<"abcdefgh"[j]<<"87654321"[i]<<endl;
+            }
+        }
+    }
 }
