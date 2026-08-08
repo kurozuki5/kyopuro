@@ -19,15 +19,15 @@ using ll=long long;
 //a*b>=mになったらbreak;する
 //注意点
 //感想
+//１つの値を固定してそこからm以上となるものを探せばよいこの時a<bとするとさらに減る。
 int main(){
     ll n,m;
     cin>>n>>m;
     ll ans=1ll<<60;
-    ll a=sqrt(m);
-    for(ll i=a;i<=n;i++){
-        for(ll j=a;j<=n;j++){
-            if(i*j>=m){ans=min(ans,i*j);break;}
-        }
+    for(ll i=1;i<=n;i++){
+        ll a=(m+i-1)/i;
+        if(a<=n)ans=min(ans,a*i);
+        if(i>a)break;
     }
     if(ans==1ll<<60)cout<<-1<<endl;
     else cout<<ans<<endl;
