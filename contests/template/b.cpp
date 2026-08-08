@@ -6,7 +6,5 @@ using namespace atcoder;
 #define rep1(s,i,n) for (int i=s;i<(int)(n);i++)
 using ll=long long;
 int main(){
-    int a;
-    cin>>a;
     
 }
