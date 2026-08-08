@@ -1,1 +1,27 @@
+# VS Code
 .vscode/
+
+# 実行ファイル
+*.out
+*.exe
+*.bin
+
+# C/C++ コンパイル生成物
+*.o
+*.obj
+*.a
+*.so
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# デバッグ・一時ファイル
+*.log
+*.tmp
+
+# macOS
+.DS_Store
