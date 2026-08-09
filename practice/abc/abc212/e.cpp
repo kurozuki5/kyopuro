@@ -13,23 +13,35 @@ using ll=long long;
 //初期化dp[0][0]=1;
 //dp[m][i+1]+=dp[0][i];
 //dp[0][k]答え
+//O(n^2*m)
+//これだとダメで
+//全部の頂点のdpの値から隣接いてない頂点の値を引く 
 //注意点
 //感想
+using mint=modint998244353;
 int main(){
     int n,m,k;
     cin>>n>>m>>k;
-    vector<set<int>>unused(n);
+    vector<vector<int>>g(n);
     rep(i,m){
         int u,v;
         cin>>u>>v;
         u--;v--;
-        unused[u].insert(v);
-        unused[v].insert(u);
+        g[u].push_back(v);
+        g[v].push_back(u);
     }
-    vector<vector<ll>>dp(n,vector<ll>(k+1));
-    dp[0][0]=1;
-    const ll mod=998244353;
+    vector<mint>dp(n);
+    dp[0]=1;
     rep(d,k){
-
+        vector<mint>p(n);
+        swap(p,dp);
+        mint tot=0;
+        rep(i,n)tot+=p[i];
+        rep(i,n){
+            dp[i]=tot;
+            for(int nv:g[i])dp[i]-=p[nv];
+            dp[i]-=p[i];
+        }
     }
+    cout<<dp[0].val()<<endl;
 }
