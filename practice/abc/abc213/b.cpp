@@ -10,5 +10,14 @@ using ll=long long;
 //注意点
 //感想
 int main(){
-    
+    int n;
+    cin>>n;
+    vector<pair<int,int>>p;
+    for(int i=0;i<n;i++){
+        int a;
+        cin>>a;
+        p.push_back({a,i+1});
+    }
+    sort(p.begin(),p.end(),greater<pair<int,int>>());
+    cout<<p[1].second<<endl;
 }

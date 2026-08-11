@@ -17,3 +17,4 @@ O(Q log Q)
 ・追加するとき X - add
 ・取り出すとき pq.top() + add
 ・priority_queueで最小値を管理する場合はgreaterを使う
+
