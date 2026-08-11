@@ -6,9 +6,10 @@ using namespace atcoder;
 #define rep1(s,i,n) for (int i=s;i<(int)(n);i++)
 using ll=long long;
 //考察
+//SとGからいけるとこまで行って
 //やること
 //注意点
 //感想
 int main(){
-    
+
 }
