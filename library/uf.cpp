@@ -35,19 +35,7 @@ struct uf
         return siz[root(x)];
     }
 };
+
 int main(){
-    int n;
-    cin>>n;
-    vector<tuple<int,int,int>>g(n);
-    for(auto &[w,u,v]:g){
-        cin>>u>>v>>w;
-        u--;v--;
-    }
-    sort(g.begin(),g.end());
-    uf uf(n);
-    ll ans=0;
-    for(auto[w,u,v]:g){
-        uf.unite(u,v);
-        if(!uf.same(u,v))ans+=uf.size(u)*uf.size(v)*;
-    }
+    
 }
