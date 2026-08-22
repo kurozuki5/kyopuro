@@ -17,7 +17,7 @@ struct uf
         for(int i=0;i<sz;i++)par[i]=i;
     }
     int root(int x){
-        if(par[x]=x)return x;
+        if(par[x]==x)return x;
         return par[x]=root(par[x]);
     }
     void unite(int x,int y){
@@ -28,8 +28,7 @@ struct uf
         group--;
     }
     bool same(int x,int y){
-        int rx=root(rx),ry=root(ry);
-        return rx==ry;
+        return root(x)==root(y);
     }
     int size(int x){
         return siz[root(x)];
@@ -38,7 +37,7 @@ struct uf
 int main(){
     int n;
     cin>>n;
-    vector<tuple<int,int,int>>g(n);
+    vector<tuple<int,int,int>>g(n-1);
     for(auto &[w,u,v]:g){
         cin>>u>>v>>w;
         u--;v--;
@@ -47,7 +46,8 @@ int main(){
     uf uf(n);
     ll ans=0;
     for(auto[w,u,v]:g){
+        ans+=(ll)w*uf.size(u)*uf.size(v);
         uf.unite(u,v);
-        if(!uf.same(u,v))ans+=uf.size(u)*uf.size(v)*;
     }
+    cout<<ans<<endl;
 }
