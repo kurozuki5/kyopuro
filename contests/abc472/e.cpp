@@ -58,5 +58,4 @@ int main(){
     int t;
     cin>>t;
     while(t--)solve();
->>>>>>> 517f8fd (abc472)
 }
