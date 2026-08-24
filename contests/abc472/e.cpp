@@ -9,10 +9,6 @@ using ll=long long;
 //やること
 //注意点
 //感想
-<<<<<<< HEAD
-int main(){
-    
-=======
 void solve(){
     int n,m;
     cin>>n>>m;
