@@ -59,9 +59,9 @@ int main(){
 
 
 
-    vector<pair<int,int>>M={{83,86},
-                            {77,15},
-                            {3,35}};
+    vector<pair<int,int>>M={{1,1},
+                            {1,0},
+                            {0,0}};
     vector<vector<int>>g(n,vector<int>(n,0));
 
 
@@ -75,8 +75,8 @@ int main(){
 
     for(int i=0;i<m;i++)cout<<M[i].first<<" "<<M[i].second<<endl;
     for(int i=0;i<n*n;i++)cout<<ans[i]<<endl;
-    // ofstream outputfile("test.txt");
-    // for(int i=0;i<m;i++)outputfile<<M[i].first<<" "<<M[i].second<<endl;
-    // for(int i=0;i<n*n;i++)outputfile<<ans[i]<<endl;
-    // outputfile.close();
+    ofstream outputfile("test.txt");
+    for(int i=0;i<m;i++)outputfile<<M[i].first<<" "<<M[i].second<<endl;
+    for(int i=0;i<n*n;i++)outputfile<<ans[i]<<endl;
+    outputfile.close();
 }
