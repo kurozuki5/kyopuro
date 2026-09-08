@@ -9,15 +9,9 @@ using ll=long long;
 //やること
 //注意点
 //感想
-void solve(){
-    int n;
-    cin>>n;
-    vector<int>a(n);
-    for(int i=0;i<n;i++)cin>>a[i];
-    
-}
 int main(){
-    int t;
-    cin>>t;
-    while(t--)solve();
+    string s,t;
+    cin>>s>>t;
+    if(s<t)cout<<"Yes"<<endl;
+    else cout<<"No"<<endl;
 }

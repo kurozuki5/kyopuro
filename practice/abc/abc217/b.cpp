@@ -9,15 +9,12 @@ using ll=long long;
 //やること
 //注意点
 //感想
-void solve(){
-    int n;
-    cin>>n;
-    vector<int>a(n);
-    for(int i=0;i<n;i++)cin>>a[i];
-    
-}
 int main(){
-    int t;
-    cin>>t;
-    while(t--)solve();
+    set<char>st={'B','R','G','H'};
+    for(int i=0;i<3;i++){
+        string s;
+        cin>>s;
+        st.erase(s[1]);
+    }
+    cout<<'A'<<*st.begin()<<'C'<<endl;
 }

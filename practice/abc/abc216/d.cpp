@@ -14,6 +14,7 @@ int main(){
     cin>>n>>m;
     vector<int>cnt(n,0);
     vector<queue<int>>que(m);
+
     for(int i=0;i<m;i++){
         int k;
         cin>>k;
@@ -25,7 +26,5 @@ int main(){
         }
         cnt[que[i].front()]++;
     }
-    for(int i=0;i<n;i++){
-        
-    }
+    
 }

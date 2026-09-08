@@ -9,15 +9,14 @@ using ll=long long;
 //やること
 //注意点
 //感想
-void solve(){
+int main(){
     int n;
     cin>>n;
-    vector<int>a(n);
-    for(int i=0;i<n;i++)cin>>a[i];
-    
-}
-int main(){
-    int t;
-    cin>>t;
-    while(t--)solve();
+    vector<int>p(n),ip(n);
+    for(int i=0;i<n;i++){
+        cin>>p[i];
+        p[i]--;
+        ip[p[i]]=i+1;
+    }
+    for(auto ans:ip)cout<<ans<<" ";
 }
