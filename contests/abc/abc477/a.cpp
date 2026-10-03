@@ -10,5 +10,9 @@ using ll=long long;
 //注意点
 //感想
 int main(){
-    
+    char r;
+    cin>>r;
+    if(r=='B')cout<<'Y';
+    else if(r=='Y')cout<<'R';
+    else cout<<'B';
 }
