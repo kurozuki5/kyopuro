@@ -10,5 +10,9 @@ using ll=long long;
 //注意点
 //感想
 int main(){
-    
+    int a,b;
+    cin>>a>>b;
+    int ans=1;
+    for(int i=b+1;i<=a;i++)ans*=32;
+    cout<<ans<<endl;
 }

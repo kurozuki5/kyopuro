@@ -10,5 +10,13 @@ using ll=long long;
 //注意点
 //感想
 int main(){
-    
+    int n;
+    cin>>n;
+    vector<int>a(n);
+    for(int i=0;i<n;i++)cin>>a[i];
+    ll ans=0;
+    vector<int>p;
+    for(int i=n-1;i>0;i--){
+        
+    }
 }
