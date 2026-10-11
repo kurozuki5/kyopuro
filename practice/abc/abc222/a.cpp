@@ -10,5 +10,8 @@ using ll=long long;
 //注意点
 //感想
 int main(){
-    
+    string n;
+    cin>>n;
+    for(int i=0;i<4-n.size();i++)cout<<'0';
+    cout<<n<<endl;
 }

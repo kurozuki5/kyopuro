@@ -10,5 +10,12 @@ using ll=long long;
 //注意点
 //感想
 int main(){
-    
+    int n,p,ans=0;
+    cin>>n>>p;
+    for(int i=0;i<n;i++){
+        int a;
+        cin>>a;
+        if(a<p)ans++;
+    }
+    cout<<ans<<endl;
 }
