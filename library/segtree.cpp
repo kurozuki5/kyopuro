@@ -14,7 +14,7 @@ struct segtree{
     }
     void set(int i,T val){
         i+=n;
-        data[i]+=val;
+        data[i]=val;
         while(i>1){
             i/=2;
             data[i]=op(data[i*2],data[i*2+1]);
